@@ -1,0 +1,20 @@
+{
+  "CNBETAWin2.4.51": {
+    "asset_bundle_url": "https://autopatchcn-ipv6.bhsr.com/asb/BetaLive/output_7663997_cd086af3f307",
+    "ex_resource_url": "https://autopatchcn-ipv6.bhsr.com/design_data/BetaLive/output_7689868_456662b48277",
+    "lua_url": "https://autopatchcn-ipv6.bhsr.com/lua/BetaLive/output_7668875_0231727458ad",
+    "ifixUrl": "https://autopatchcn-ipv6.bhsr.com/ifix/BetaLive/output_0_40d2ce0253",
+    "lua_version": "7668875",
+    "customMdkResVersion": 0,
+    "customIfixVersion": 0
+  },
+  "undefined": {
+    "asset_bundle_url": "https://autopatchcn-ipv6.bhsr.com/asb/BetaLive/output_7663997_cd086af3f307",
+    "ex_resource_url": "https://autopatchcn-ipv6.bhsr.com/design_data/BetaLive/output_7689868_456662b48277",
+    "lua_url": "https://autopatchcn-ipv6.bhsr.com/lua/BetaLive/output_7668875_0231727458ad",
+    "ifixUrl": "https://autopatchcn-ipv6.bhsr.com/ifix/BetaLive/output_0_40d2ce0253",
+    "lua_version": "7668875",
+    "customMdkResVersion": 0,
+    "customIfixVersion": 0
+  }
+}
