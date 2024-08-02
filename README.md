@@ -1,4 +1,5 @@
-支持JSON文件导入，支持2.4.5X
+支持 [config.json](https://freesr-tools.pages.dev/) 配置导入，支持2.4.5X
+
 Fork of https://github.com/AzenKain/KainSR
 
 <p align="center">
@@ -30,26 +31,29 @@ Fork of https://github.com/AzenKain/KainSR
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
 
-## Installation
+# 安装
 
 ```bash
+# 前提步骤
 $ npm install
 ```
 
-## 1, Auto case:
+## 1. 自动运行:
 ```bash
-$ run file run.bat
+$ 双击文件 run.bat 即可一键运行
+```
+首次启动会花费较长时间进行编译，待提示`Server listening on port 23301`时说明启动完成
+
+注意，主角可能要进战斗以后才会显示
+## 2. 手动运行:
+
+### 2.1 流量代理
+
+```bash
+$ 您需要运行 FireFly.Proxy.v2 中的 FireflySR.Tool.Proxy.exe
 ```
 
-## 2, Manual Case:
-
-## 2.1 Proxy
-
-```bash
-$ you need run FireflySR.Tool.Proxy.exe in FireFly.Proxy.v2
-```
-
-## 2.2 Running the app
+### 2.2 运行应用
 
 ```bash
 # development
