@@ -45,7 +45,7 @@ export class HttpServerService {
             exResourceUrl: dataVersion[versions].ex_resource_url,
             luaUrl: dataVersion[versions].lua_url,
             luaVersion: dataVersion[versions].lua_version,
-            ifixVersion: "0",
+            ifixVersion: dataVersion[versions].ifixUrl,
             HAFCIPEGPIN: true,
             FKENKKHLHHD: true,
             OPGMNLINAKC: true,

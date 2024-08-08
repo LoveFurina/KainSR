@@ -14,7 +14,7 @@ export async function onGetFriendListInfoCsReq(
         friendInfoList: []
     })
 
-    const simpleFriend : starrail.MOAJBLNMOGO = new starrail.MOAJBLNMOGO({
+    const simpleFriend : starrail.FriendInfo = new starrail.FriendInfo({
         playerSimpleInfo: {
             nickname: "FireFly",
             level: 70,
@@ -43,14 +43,23 @@ export async function onSendMsgCsReq(
 ): Promise<void> {
 
     if (body.messageText.startsWith("/update")) {
-        await dataModule.updateDataInGame()
+        await dataModule.updateDataJson()
         await onGetAvatarDataCsReqNew(new starrail.GetAvatarDataCsReq({isGetAll: false}), player, dataModule)
         await onGetBagCsReqNew({}, player, dataModule)
         await onGetCurLineupDataCsReq({}, player, dataModule)
         await onGetBagCsReq({}, player, dataModule)
         await onGetAvatarDataCsReq(new starrail.GetAvatarDataCsReq({isGetAll: true}), player, dataModule)
     }
+    if (body.messageText.startsWith("/id")) {
+        const data = body.messageText.split(' ')
+        try {
+            await dataModule.getUpdateIdChar(parseInt(data[1]), player)
+        }
+        catch(e) {
+            console.log(e)
+        }
 
+    }
     const proto: starrail.SendMsgScRsp = new starrail.SendMsgScRsp({
         retcode: 0,
         endTime: Date.now(),

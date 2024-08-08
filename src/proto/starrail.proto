@@ -689,7 +689,7 @@ message JCPMKGGDEAJ {
   repeated FNDPKOIAOCO GOJHGCCIPNP = 1;
   CJBOMEDFEDO DJICBHLFOGA = 2;
   uint32 JMDHDBHGJHJ = 3;
-  uint32 COMGGJMFJAO = 4;
+  uint32 wave_index = 4;
 }
 
 message BattleBuff {
@@ -2563,7 +2563,7 @@ message DJECLBKKEGK {
 }
 
 message AHHNBNJLMGC {
-  uint32 KAGNBJDMAMF = 10;
+  uint32 num = 10;
   uint32 HGJOLGKAOFJ = 6;
   uint32 LCMIEEEGEOH = 7;
 }
@@ -2674,7 +2674,7 @@ message EKPOGEFFANM {
 }
 
 message DLIPHLMAEGE {
-  uint32 KAGNBJDMAMF = 11;
+  uint32 num = 11;
   uint32 HGJOLGKAOFJ = 2;
 }
 
@@ -3029,7 +3029,7 @@ message AHEGMFOPALB {
 
 message DJCKAKHHHNG {
   uint32 monster_id = 9;
-  uint32 KAGNBJDMAMF = 3;
+  uint32 num = 3;
 }
 
 message GJJMIKGADBO {
@@ -5366,9 +5366,9 @@ message FFJPGMKMOPP {
 }
 // ? x y z
 message Vector {
-  int32 y = 14;
-  int32 z = 5;
-  int32 x = 3;
+  int32 x = 14;
+  int32 y = 5;
+  int32 z = 3;
 }
 
 message MotionInfo {
@@ -5377,10 +5377,10 @@ message MotionInfo {
 }
 
 message BPPLPNACDHE {
-  float y = 10;
+  float x = 10;
   float MIEJCKFHOIB = 11;
-  float x = 13;
-  float z = 15;
+  float z = 13;
+  float y = 15;
 }
 
 message SceneMonsterWaveParam {
@@ -5399,7 +5399,7 @@ message SceneMonsterData {
 message SceneMonsterWave {
   uint32 JMDHDBHGJHJ = 14;
   repeated SceneMonsterData monster_list = 4;
-  uint32 COMGGJMFJAO = 10;
+  uint32 wave_index = 10;
   repeated ItemList drop_list = 3;
   SceneMonsterWaveParam monster_wave_param = 13;
 }
@@ -6683,7 +6683,7 @@ message PNMJEDIKENB {
   HCPEPLLJIGK NODNHHLIGDJ = 7;
 }
 
-message MOAJBLNMOGO {
+message FriendInfo {
   CBNKEMLBLEN FOJELNKLCJP = 7;
   PlayingState friend_playing_state = 3;
   string FBGEIFGHJDE = 13;
@@ -6794,7 +6794,7 @@ message NNPCBHAHCMK {
 }
 
 message GetFriendListInfoScRsp {
-  repeated MOAJBLNMOGO friend_info_list = 3;
+  repeated FriendInfo friend_info_list = 3;
   uint32 retcode = 10;
   repeated PlayerSimpleInfo IDFIJAHANMN = 1;
 }
@@ -6839,14 +6839,14 @@ message GOHFGMMDKPN {
 message MBNHLHDEKJD {
   uint32 retcode = 1;
   bool PIEECAEKFGF = 11;
-  MOAJBLNMOGO IMLFGEEHOBJ = 6;
+  FriendInfo IMLFGEEHOBJ = 6;
   uint32 uid = 7;
 }
 
 message GPGBHEGHMDG {
   bool PIEECAEKFGF = 2;
   uint32 uid = 5;
-  MOAJBLNMOGO IMLFGEEHOBJ = 8;
+  FriendInfo IMLFGEEHOBJ = 8;
 }
 
 message IDJKFJEODBH {
@@ -7566,7 +7566,7 @@ message Equipment {
 }
 
 message Relic {
-  bool MIDLNAIGNCG = 11;
+  bool is_discarded = 11;
   uint32 main_affix_id = 15;
   uint32 exp = 6;
   uint32 unique_id = 1;
@@ -7574,29 +7574,29 @@ message Relic {
   uint32 id = 12;
   uint32 char_id = 8;
   repeated RelicAffix sub_affix_list = 10;
-  bool MKMLLBDHMBF = 4;
+  bool is_protected = 4;
 }
 
-message AOACDCGCMEJ {
+message Material {
   uint32 id = 6;
   uint64 NPCGOKKDHDF = 9;
-  uint32 KAGNBJDMAMF = 10;
+  uint32 num = 10;
 }
 
 message IPCFFJHAIJG {
-  uint32 KAGNBJDMAMF = 12;
+  uint32 num = 12;
   uint32 id = 10;
 }
 
 message LGLODNDHIJB {
-  uint32 KAGNBJDMAMF = 7;
+  uint32 num = 7;
   uint64 NPCGOKKDHDF = 8;
   uint32 id = 5;
 }
 
 message GetBagScRsp {
   repeated uint32 IKHICOMCDHP = 2;
-  repeated AOACDCGCMEJ IBIGDPLHFKC = 11;
+  repeated Material IBIGDPLHFKC = 11;
   repeated IPCFFJHAIJG DEADFEMNDNK = 4;
   repeated PileItem IINHLLJEKCD = 5;
   repeated LGLODNDHIJB EPBIBAOBEOJ = 15;
@@ -7607,7 +7607,7 @@ message GetBagScRsp {
   repeated uint32 NGEGMHAHGLM = 12;
   repeated Equipment equipment_list = 6;
   repeated KOEDFPCCPCH JLKDHMEECJM = 8;
-  repeated AOACDCGCMEJ EGMLHAKBKMC = 1;
+  repeated Material material_list = 1;
   repeated uint32 KJIBMEFIBEN = 7;
 }
 
@@ -7742,7 +7742,7 @@ message RechargeSuccNotify {
 }
 
 message CJGMGILEBLK {
-  uint32 KAGNBJDMAMF = 14;
+  uint32 num = 14;
 }
 
 message ExchangeHcoinScRsp {
@@ -8000,6 +8000,7 @@ message GFMJOLHDMLD {
   uint32 retcode = 6;
   uint32 AOHKOELBJJC = 12;
 }
+message JoinLineupScRsp {}
 
 enum CmdLineupType {
   CmdLineupTypeNone = 0;
@@ -8094,14 +8095,14 @@ message LineupInfo {
   uint32 IJNPCCNDCGI = 9;
   uint32 index = 3;
   bool is_virtual = 15;
-  uint32 HGBHBGMMOKG = 6;
+  uint32 mp_max = 6;
   string name = 14;
   ExtraLineupType extra_lineup_type = 7;
   uint32 plane_id = 10;
   repeated uint32 NLKMJKFHEBM = 5;
   uint32 KCLNAIMOFDL = 13;
   repeated uint32 DFKPGCKCHAH = 1;
-  uint32 HPMGGECENEM = 8;
+  uint32 mp = 8;
 }
 
 message MFOCHMOCKMO {
@@ -8229,7 +8230,7 @@ message ReplaceLineupCsReq {
   uint32 plane_id = 7;
   ExtraLineupType extra_lineup_type = 12;
   uint32 KCLNAIMOFDL = 3;
-  repeated HIAKOFMGDLP IPHNMDOIFON = 9;
+  repeated HIAKOFMGDLP replace_slot_list = 9;
   uint32 index = 2;
 }
 
@@ -11282,7 +11283,7 @@ message OJLIGKOJEMK {
 }
 
 message FHHKMLBOIDI {
-  uint32 KAGNBJDMAMF = 1;
+  uint32 num = 1;
 }
 
 message ReserveStaminaExchangeScRsp {
@@ -13321,7 +13322,7 @@ message GLBFFHMCBKD {
 
 message FLHOGNNPCEE {
   uint32 GAPJAJNHGLK = 6;
-  uint32 KAGNBJDMAMF = 2;
+  uint32 num = 2;
 }
 
 message KEIJECMCKLE {
@@ -14410,14 +14411,14 @@ message AHFKLGBBENO {
 }
 
 message HBJFKGANPNI {
-  uint32 KAGNBJDMAMF = 11;
+  uint32 num = 11;
   uint32 BOMCMAJNIMH = 7;
   uint32 EKCIGPDFKJO = 6;
 }
 
 message MJOHPHBAIJK {
   uint32 MGNNKBOBLFG = 4;
-  uint32 KAGNBJDMAMF = 12;
+  uint32 num = 12;
 }
 
 message DCPOEJEMIOK {
@@ -15511,7 +15512,7 @@ message MLPGEJDGMCL {
 
 message HHPDIAMEEMJ {
   uint32 GBHFFCBGJOC = 10;
-  uint32 HGBHBGMMOKG = 14;
+  uint32 mp_max = 14;
 }
 
 message DMDPPMEBOLD {
@@ -16886,7 +16887,7 @@ message FFLPJLAKGIM {
   repeated Equipment GACBPCPHHON = 5;
   repeated IPCFFJHAIJG DEADFEMNDNK = 2;
   OIOFBFHDFCI MELKJFFJNKB = 9;
-  repeated AOACDCGCMEJ FLNJICHOKAC = 345;
+  repeated Material FLNJICHOKAC = 345;
   repeated EEJPMEPIKGA PNLBAGBGLFD = 1;
   repeated uint32 EMFEKEEDAFC = 8;
   repeated uint32 MJBALOMKGDG = 1546;
@@ -16898,7 +16899,7 @@ message FFLPJLAKGIM {
   uint32 IGCIMDMBDFA = 1522;
   DFILOMFFAFD PBPPJOHLBAD = 3;
   repeated DEJJKIFLDFB PDLJEBOFMEP = 1100;
-  repeated AOACDCGCMEJ EGMLHAKBKMC = 14;
+  repeated Material material_list = 14;
   repeated uint32 DIOCDCPKOLK = 12;
   repeated MultiPathAvatarInfo EPDNICAJOLI = 1834;
   ItemList ILCELHLKAMJ = 969;
@@ -17388,12 +17389,12 @@ message LBEILMENCMG {
 
 message EILDNLLOOLG {
   uint32 COKOPHBHOCF = 5;
-  uint32 KAGNBJDMAMF = 11;
+  uint32 num = 11;
 }
 
 message NFCCNKNGBKE {
   uint32 COKOPHBHOCF = 6;
-  uint32 KAGNBJDMAMF = 15;
+  uint32 num = 15;
 }
 
 message DLDKEMOEMPI {

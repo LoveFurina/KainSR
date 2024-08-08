@@ -1,6 +1,6 @@
-支持 [config.json](https://freesr-tools.pages.dev/) 配置导入，支持2.4.5X
+# 支持 [freesr-data.json](https://freesr-tools.pages.dev/) 配置导入，支持2.4.5X
 
-Fork of https://github.com/AzenKain/KainSR
+# Fork of https://github.com/AzenKain/KainSR
 
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
@@ -30,7 +30,7 @@ Fork of https://github.com/AzenKain/KainSR
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-
+## *懒人步骤：先双击install.bat安装依赖，再双击run.bat一键编译启动服务端和代理（电脑需要安装nodejs）*
 # 安装
 
 ```bash
@@ -44,7 +44,7 @@ $ 双击文件 run.bat 即可一键运行
 ```
 首次启动会花费较长时间进行编译，待提示`Server listening on port 23301`时说明启动完成
 
-注意，主角可能要进战斗以后才会显示
+
 ## 2. 手动运行:
 
 ### 2.1 流量代理
@@ -65,7 +65,22 @@ $ npm run start:dev
 # production mode
 $ npm run start:prod
 ```
+## 3. 设置 freesr-data:
+### 3.1 更新新的 freesr-data.json
 
+```bash
+$ 您可以在 src/data 中更新新的 freesr-data.json
+```
+### 3.2 在游戏内更新 data
+
+```bash
+$ 您可以在游戏中输入 /update 以从新的 freesr-data.json 更新新数据
+```
+### 3.3 改变多命途角色的命途
+
+```bash
+$ 您可以在游戏中输入 /id + 角色id 例如: /id 8006 (女同谐)来更新该角色的新命途
+```
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
