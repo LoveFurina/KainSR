@@ -13,7 +13,7 @@ interface Message {
 }
 
 // Đọc nội dung tệp proto
-const protoFile = 'proto/StarRail1.proto';
+const protoFile = 'src/proto/HSR_2.4.53_LitianLeak.proto';
 const protoContent = fs.readFileSync(protoFile, 'utf-8');
 
 // Tìm message trong nội dung tệp proto
@@ -40,10 +40,10 @@ while ((match = messageRegex.exec(protoContent)) !== null) {
     messages.push({ name: messageName, fields: fields });
 }
 
-// Tìm message có field bool với index 12 và repeated uint32 với index 10
+
 const targetMessages = messages.filter(message => {
-    const stringFields = message.fields.filter(field => field.type === 'uint32');
-    return stringFields.length === 1 && message.fields.length === 1;
+    const stringFields = message.fields.filter(field => field.type === 'string');
+    return stringFields.length === 6 && message.fields.length === 6;
 });
 
 // In ra các message thỏa mãn điều kiện

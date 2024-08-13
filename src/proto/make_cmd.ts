@@ -2,11 +2,11 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as protobuf from 'protobufjs';
 
-// Đường dẫn đến file .proto của bạn
-const protoFilePath = path.resolve(__dirname, 'starrail.proto');
+// Path to your .proto file
+const protoFilePath = path.resolve(process.cwd(), 'src/proto/HSR_2.4.53_LitianLeak.proto');
 
-// Đường dẫn đến file xuất
-const outputFilePath = path.resolve(__dirname, 'cmdId.ts');
+// Path to the output file
+const outputFilePath = path.resolve(process.cwd(), 'src/proto/cmdId.ts');
 
 async function extractCmdIds() {
     const root = await protobuf.load(protoFilePath);
@@ -15,12 +15,17 @@ async function extractCmdIds() {
     function traverseNamespace(namespace: protobuf.NamespaceBase) {
         namespace.nestedArray.forEach(nested => {
             if (nested instanceof protobuf.Enum) {
-                if (nested.name.toLowerCase().includes('cmd')) {
-                    Object.entries(nested.values).forEach(([key, value]) => {
-                        cmdIds[key] = value as number;
-                    });
-                }
+                const values = nested.toJSON().values as { [key: string]: number };
+                
+                // Iterate through the fields of the enum
+                Object.entries(values).forEach(([key, value]) => {
+                    // Check if the field name starts with "cmd" (case-insensitive)
+                    if (key.toLowerCase().startsWith('cmd')) {
+                        cmdIds[key] = value;
+                    }
+                });
             }
+
             if (nested instanceof protobuf.Namespace) {
                 traverseNamespace(nested);
             }
@@ -31,7 +36,7 @@ async function extractCmdIds() {
 
     const outputContent = `export const CmdID: { [key: string]: number } = ${JSON.stringify(cmdIds, null, 4)};\n`;
     fs.writeFileSync(outputFilePath, outputContent, 'utf-8');
-    console.log(`File ${outputFilePath} đã được tạo thành công.`);
+    console.log(`File ${outputFilePath} has been successfully created.`);
 }
 
 extractCmdIds().catch(console.error);

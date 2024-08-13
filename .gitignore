@@ -2,7 +2,7 @@
 /dist
 /node_modules
 /build
-/.history
+.history
 
 # Logs
 logs
