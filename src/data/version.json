@@ -8,6 +8,24 @@
     "customMdkResVersion": 0,
     "customIfixVersion": 0
   },
+  "CNBETAWin2.4.52": {
+    "asset_bundle_url": "https://autopatchcn.bhsr.com/asb/BetaLive/output_7705255_1e1ff2a185fd",
+    "ex_resource_url": "https://autopatchcn.bhsr.com/design_data/BetaLive/output_7707294_7609546fa884",
+    "lua_url": "https://autopatchcn.bhsr.com/lua/BetaLive/output_7705465_e8bd961bff37",
+    "ifixUrl": "https://autopatchcn-ipv6.bhsr.com/ifix/BetaLive/output_0_40d2ce0253",
+    "lua_version": "7705465"
+    "customMdkResVersion": 0,
+    "customIfixVersion": 0
+  },
+  "CNBETAWin2.4.53": {
+    "asset_bundle_url": "https://autopatchcn.bhsr.com/asb/BetaLive/output_7758621_8ca8f85844d6",
+    "ex_resource_url": "https://autopatchcn.bhsr.com/design_data/BetaLive/output_7774270_845f112075c7",
+    "lua_url": "https://autopatchcn.bhsr.com/lua/BetaLive/output_7758773_990fec29651b",
+    "ifixUrl": "https://autopatchcn-ipv6.bhsr.com/ifix/BetaLive/output_0_40d2ce0253",
+    "lua_version": "7758773"
+    "customMdkResVersion": 0,
+    "customIfixVersion": 0
+  },
   "undefined": {
     "asset_bundle_url": "https://autopatchcn-ipv6.bhsr.com/asb/BetaLive/output_7663997_cd086af3f307",
     "ex_resource_url": "https://autopatchcn-ipv6.bhsr.com/design_data/BetaLive/output_7689868_456662b48277",
