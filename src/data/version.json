@@ -25,5 +25,23 @@
     "lua_version": "7758773",
     "customMdkResVersion": 0,
     "customIfixVersion": 0
+  },
+  "CNBETAWin2.4.54": {
+    "asset_bundle_url": "https://autopatchcn.bhsr.com/asb/BetaLive/output_7809991_5b15e2d999fc6",
+    "ex_resource_url": "https://autopatchcn.bhsr.com/design_data/BetaLive/output_7809991_c16e5db752b5",
+    "lua_url": "https://autopatchcn.bhsr.com/lua/BetaLive/output_7810120_451ec5a5df38",
+    "ifixUrl": "https://autopatchcn-ipv6.bhsr.com/ifix/BetaLive/output_0_40d2ce0253",
+    "lua_version": "7810120",
+    "customMdkResVersion": 0,
+    "customIfixVersion": 0
+  },
+  "CNBETAWin2.4.55": {
+    "asset_bundle_url": "https://autopatchcn.bhsr.com/asb/BetaLive/output_7852702_3da63958007e",
+    "ex_resource_url": "https://autopatchcn.bhsr.com/design_data/BetaLive/output_7857075_9f5efd1b38f2",
+    "lua_url": "https://autopatchcn.bhsr.com/lua/BetaLive/output_7852981_757d6a2b7feb",
+    "ifixUrl": "https://autopatchcn-ipv6.bhsr.com/ifix/BetaLive/output_0_40d2ce0253",
+    "lua_version": "7852981",
+    "customMdkResVersion": 0,
+    "customIfixVersion": 0
   }
 }
