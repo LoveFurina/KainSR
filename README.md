@@ -1,4 +1,4 @@
-# 支持 [freesr-data.json](https://freesr-tools.pages.dev/) 配置导入，支持2.4.51/2/3
+# 支持 [freesr-data.json](https://freesr-tools.pages.dev/) 配置导入，支持2.4.51/2/3/4/5
 
 # Fork of https://github.com/AzenKain/KainSR
 如果有疑问，可以在discord（用户名lovefurina002）上私聊我，请勿在reversed rooms里直接问这个
